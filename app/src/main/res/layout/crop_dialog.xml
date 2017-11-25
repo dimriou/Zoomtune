@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBlack"
+    style="@android:style/Theme.InputMethod">
+
+    <com.isseiaoki.simplecropview.CropImageView
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imgCrop"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:scv_crop_mode="ratio_3_4"
+        custom:scv_background_color="#00ffffff"
+        custom:scv_handle_color="@color/colorAccent"
+        custom:scv_guide_color="@color/colorAccent"
+        custom:scv_overlay_color="#00ffffff"
+        custom:scv_frame_color="@color/colorAccent"
+        custom:scv_handle_size="14dp"
+        custom:scv_touch_padding="8dp"
+        custom:scv_handle_show_mode="show_always"
+        custom:scv_guide_show_mode="show_always"
+        custom:scv_min_frame_size="50dp"
+        custom:scv_frame_stroke_weight="1dp"
+        custom:scv_guide_stroke_weight="1dp"
+        android:layout_above="@+id/crop" />
+
+    <Button
+        android:id="@+id/crop"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@android:drawable/ic_menu_crop"
+        android:foreground="@drawable/c_ripple"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

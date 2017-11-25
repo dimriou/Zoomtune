@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.zoomtune.zoomtune.zoom.ZoomActivity"
+    android:background="@color/colorBlack"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_weight="0.7"
+        android:id="@+id/textViewHolder"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:textColor="@color/colorPurplePrimary"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/soundTitle"
+            android:layout_alignParentTop="true" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_weight="1"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/frame_background"
+        android:layout_height="60dp"
+        android:id="@+id/musicList"
+        android:elevation="3dp" />
+
+    <RelativeLayout
+        android:background="@color/colorBlack"
+        android:layout_weight="15"
+        android:id="@+id/imageHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:background="@color/colorPurplePrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView" />
+
+        <net.zoomtune.zoomtune.zoom.CircleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageContainer"
+            android:layout_alignStart="@id/imageView"
+            android:layout_alignEnd="@id/imageView"
+            android:layout_centerVertical="true"
+            android:layout_alignBottom="@id/imageView"
+            android:layout_alignTop="@id/imageView"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:background="@drawable/frame_background"
+        android:elevation="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageButton
+            android:background="@drawable/z_create_button"
+            android:foreground="@drawable/ripple"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/button_create"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="21dp"
+            android:background="@drawable/z_home_button"
+            android:foreground="@drawable/ripple"
+            android:id="@+id/button_back"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/z_musiclib_button"
+            android:foreground="@drawable/ripple"
+            android:id="@+id/button_musiclibrary"
+            android:layout_marginEnd="24dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>
